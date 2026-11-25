@@ -87,7 +87,7 @@ footer{padding:28px 0 40px;text-align:center;font-size:13px;color:var(--muted)}
     <div class="price-line">Instant access · PDF, 35 pages · 7-day guarantee</div>
     <div class="price-big">£27</div>
     <a class="btn" href="#" data-checkout>I want the e-book</a>
-    <div class="secure">Secure payment by Hotmart</div>
+    <div class="secure">Secure payment by Payhip</div>
   </div>
 </header>
 
@@ -160,7 +160,7 @@ footer{padding:28px 0 40px;text-align:center;font-size:13px;color:var(--muted)}
         <div class="new">£27 <small>one-off payment</small></div>
       </div>
       <a class="btn" href="#" data-checkout>Buy now</a>
-      <div class="secure">Secure payment by Hotmart</div>
+      <div class="secure">Secure payment by Payhip</div>
     </div>
   </div>
 </section>
@@ -170,7 +170,7 @@ footer{padding:28px 0 40px;text-align:center;font-size:13px;color:var(--muted)}
     <h2 class="center">Frequently asked <span class="hl">questions</span></h2>
     <div class="faq-item">
       <strong>How do I receive the e-book?</strong>
-      <p>Access is released automatically after payment confirmation, through the Hotmart platform.</p>
+      <p>Access is released automatically after payment confirmation, through the Payhip platform.</p>
     </div>
     <div class="faq-item">
       <strong>Do I need to know how to bake?</strong>
@@ -182,11 +182,11 @@ footer{padding:28px 0 40px;text-align:center;font-size:13px;color:var(--muted)}
     </div>
     <div class="faq-item">
       <strong>What if it isn&rsquo;t for me?</strong>
-      <p>You are covered by a 7-day guarantee. If the e-book isn&rsquo;t what you expected, ask for a refund within 7 days through Hotmart.</p>
+      <p>You are covered by a 7-day guarantee. If the e-book isn&rsquo;t what you expected, ask for a refund within 7 days through Payhip.</p>
     </div>
     <div class="faq-item">
       <strong>Is payment secure?</strong>
-      <p>Yes. All payments are processed by Hotmart, a global platform for digital products.</p>
+      <p>Yes. All payments are processed by Payhip via Stripe.</p>
     </div>
     <div class="center" style="margin-top:26px">
       <a class="btn" href="#" data-checkout>I want to start now</a>
@@ -207,12 +207,11 @@ footer{padding:28px 0 40px;text-align:center;font-size:13px;color:var(--muted)}
 <script>
 // ============================================================================
 // CHECKOUT — SINGLE SWAP POINT
-// The Hotmart product in GBP does not exist yet, so there is no checkout URL.
-// When it exists, paste it into CHECKOUT_URL below and every buy button on
-// this page (all marked data-checkout) will point to it, keeping any UTM
-// parameters from the ad click. Do NOT link to the Portuguese BRL checkout.
+// The Payhip checkout URL for "Profitable Cake in a Jar" (£27 GBP) is set below.
+// Every buy button on this page (all marked data-checkout) points to it, keeping
+// any UTM parameters from the ad click. Do NOT link to the Portuguese BRL checkout.
 // ============================================================================
-var CHECKOUT_URL = ""; // TODO: paste the Hotmart GBP checkout URL here
+var CHECKOUT_URL = "https://payhip.com/b/yjO1o"; // Payhip checkout URL
 
 (function(){
   // Wire every buy button to the single checkout URL once it is set.
@@ -231,7 +230,7 @@ var CHECKOUT_URL = ""; // TODO: paste the Hotmart GBP checkout URL here
       if(!href){
         // Checkout is not live yet — do not send the buyer anywhere.
         e.preventDefault();
-        alert("Checkout isn't live yet — the Hotmart product in GBP is still being created. Please check back soon.");
+        alert("Checkout isn't live yet — please check back soon.");
         return;
       }
       a.href = href;
